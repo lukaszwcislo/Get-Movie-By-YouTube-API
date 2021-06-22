@@ -9,7 +9,7 @@ function countdownAnimationMovie() {
     let getInputValue;
 
     inputMovie.addEventListener("input", (e) => {
-      getInputValue = e.target.value.split("?v=")[1];
+      getInputValue = e.target.value.replace(/.*?v=/, "");
     });
 
     form.addEventListener("submit", (e) => {
