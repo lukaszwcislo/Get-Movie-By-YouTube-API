@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.player-wrapper {
+    width: 640px;
+    height: 360px;
+    position: relative;
+}
+
+.animation-box {
+    background: #2e2e2ebd;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity .2s 0s, z-index .2s 0s;
+    opacity: 1;
+}
+
+.animation-box:hover {
+    z-index: -1;
+    opacity: 0;
+}
+
+#player:hover~.animation-box {
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .2s 0s, z-index 0s .2s;
+}
+
+.animation-box span {
+    text-align: center;
+    font-size: 10em;
+    margin: 0;
+    color: #fff;
+}
+
+input {
+    margin-top: 20px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type="text"] {
+    background-color: transparent;
+    padding: 10px 45px;
+    min-width: 350px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    transition: .2s;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Get movie by YouTube API</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+</head>
+
+<body>
+    <div class="player-wrapper">
+        <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+        <div id="player"></div>
+        <div class="animation-box">
+            <span></span>
+        </div>
+    </div>
+
+    <form>
+        <input class="input-movie" type="text" placeholder="Wklej link filmu z YouTube">
+        <input class="input-submit" type="submit" value="Załaduj film">
+    </form>
+
+
+    <script src="get-youtube-api.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
