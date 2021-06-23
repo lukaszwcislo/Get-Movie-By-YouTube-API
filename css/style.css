@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -76,9 +77,40 @@ input[type="submit"] {
     transition: .2s;
 }
 
+input[type="submit"][disabled] {
+    pointer-events: none;
+}
+
 input[type="submit"]:hover {
     cursor: pointer;
     background-color: transparent;
     color: #fff;
     border-color: #fff;
+}
+
+.movies-list * {
+    color: #fff;
+}
+
+.movies-list ul li {
+    cursor: pointer;
+    margin: 18px 0;
+}
+
+.alert {
+    text-transform: uppercase;
+    background: #ff000057;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px 20px;
+    top: -53px;
+    width: 260px;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: opacity .7s;
+}
+
+.alert.active {
+    opacity: 1;
 }
